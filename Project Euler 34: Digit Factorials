@@ -1,0 +1,19 @@
+function Hesapla(n) {
+    var a = 0;
+    while (n > 0) {
+        a+= FACT[n % 10];
+        n = n / 10 | 0;
+    }
+    return sum;
+}
+
+function Cozum () {
+    var a = 0;
+    for (var i = 10; i <= 1499999; i++) {
+        if (i === Hesapla (i)) {
+            a+= i;
+        }
+    }
+    return a;
+}
+Cozum();
