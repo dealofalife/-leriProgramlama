@@ -1,0 +1,18 @@
+var maxDepth = function(kok) {
+   return MaxBulucu(kok,1)    
+};
+var MaxBulucu = function(kok, num){
+if(root == null){
+      return 0
+  }
+  if (kok.right == null && kok.left == null){
+      return num
+  }
+  if (kok.right && kok.left){
+      return Math.max( MaxBulucu (kok.right, num+1), MaxBulucu (kok.left, num + 1))
+  }  else if (kok.right != null){
+      return MaxBulucu (kok.right, num+1)
+  } else {
+      return MaxBulucu (kok.left, num+1)
+  }
+};
