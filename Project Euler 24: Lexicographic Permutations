@@ -1,0 +1,17 @@
+var faktoriyel = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880];
+
+function Cozum(Sayi) {
+
+  var Kume = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var Cevap = "";
+
+  Sayi --;
+  for (var i = arr.length - 1; i >= 0; i--) {
+    var t = Sayi / faktoriyel [i] | 0;
+    Sayi %= faktoriyel [i];
+    Cevap += Kume [t];
+    Kume.splice(t, 1);
+  }
+  return Cevap;
+}
+Cozum (1e6);
