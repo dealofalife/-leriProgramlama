@@ -1,0 +1,26 @@
+var calculate = function(s) {};
+
+function helper(s, i, sign, finalSum, currentSum) {
+  while (i < s.length) {
+    if (s[i].match(/[0-9]/)) {
+      var num = 0;
+      while (i < s.length) {
+        if (s[i].match(/[0-9]/)) {
+          num *= 10;
+          num += parseInt(s[i]);
+          i++;
+        } else {
+          break;
+        }
+      }
+    } else if (s[i] === "-") {
+    } else if (s[i] === "+") {
+      return num + helper(s, i, sign, finalSum, currentSum);
+    } else if (s[i] === "*") {
+    } else if (s[i] === "/") {
+    } else if (s[i] === "(") {
+    } else if (s[i] === ")") {
+    }
+    i++;
+  }
+}
