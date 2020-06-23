@@ -1,0 +1,27 @@
+var Fibonacci = require ( '../utils/fibonacci' );
+var pandigital = require ( '../utils/modules/pandigital' );
+function process ( lastOnly )
+{
+    var fibonacciSequence = new Fibonacci ();
+    var fibNumber = 100000
+    fibonacciSequence.advanceTo ( fibNumber );
+    var c = fibonacciSequence.current;
+    while ( true )
+    {
+         if ( pandigital.isPandigitalLast9 ( c ) )
+         {
+             if ( lastOnly ) { return fibonacciSequence.number; }
+             if ( pandigital.isPandigitalFirst9 ( c ) ) 
+             return fibonacciSequence.number;
+         }
+         c = fibonacciSequence.nextNumber ();
+     }
+}
+this.solve = function ()
+{
+     return process ( false ); 
+};
+this.test = function ()
+{
+     return process ( true );
+};
