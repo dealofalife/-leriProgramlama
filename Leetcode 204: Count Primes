@@ -1,0 +1,23 @@
+function Asal(n) {
+    if(n === 2 || n === 3) {
+        return true
+    }
+    if((n % 6 !==1) && (n % 6 !== 5)){
+        return false
+    }
+    var sqrt_n =  Math.sqrt(n)
+    for(var i = 3; i <=  sqrt_n; i+=2){
+        if(n % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+function AsalSay(n) {
+    var say = 0
+    for(var i = 2; i < n; i++) {
+        if(Asal (i)){
+            say++
+        }
+    }
+    return say}
